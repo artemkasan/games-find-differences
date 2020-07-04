@@ -6,10 +6,18 @@
 		_Red ("Red", Vector) = (1, 0, 0, 1)
 		_Green("Green", Vector) = (0, 1, 0, 1)
 		_Blue("Blue", Vector) = (0, 0, 1, 1)
-		_Color ("Tint", Color) = (1, 1, 1, 1)
 	}
 	SubShader
 	{
+		Tags
+		{
+			"Queue"="Transparent"
+			"IgnoreProjector"="True"
+			"RenderType"="Transparent"
+			"PreviewType"="Plane"
+			"CanUseSpriteAtlas"="True"
+		}
+
 		Pass
 		{
 			ZTest Always
