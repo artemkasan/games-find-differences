@@ -3,6 +3,7 @@
 	Properties
 	{
 		_MainTex ("Source", 2D) = "white" {}
+		_Alpha ("Alpha", float) = 1
 		_Red ("Red", Vector) = (1, 0, 0, 1)
 		_Green("Green", Vector) = (0, 1, 0, 1)
 		_Blue("Blue", Vector) = (0, 0, 1, 1)
@@ -52,6 +53,7 @@
 			
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
+			float _Alpha;
 			float4 _Red;
 			float4 _Green;
 			float4 _Blue;
@@ -70,7 +72,7 @@
 					_Red.x * color.x + _Red.y * color.y + _Red.z * color.z,
 					_Green.x * color.x + _Green.y * color.y + _Green.z * color.z,
 					_Blue.x * color.x + _Blue.y * color.y + _Blue.z * color.z,
-				color.w };
+				_Alpha < color.w ? _Alpha : color.w };
 
 				return result;
 			}
