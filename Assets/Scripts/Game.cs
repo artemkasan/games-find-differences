@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Game : MonoBehaviour
@@ -9,10 +10,11 @@ public class Game : MonoBehaviour
 	public int TotalDifferences;
 	public GameObject FinshContainer;
 
-	public Animator FinishMenu;
+	public UnityEvent OnMoveNext;
 
 	private static HashSet<int> foundItems = new HashSet<int>();
 	private static bool animationRun = false;
+
 
 	// Start is called before the first frame update
 	void Start()
@@ -38,7 +40,8 @@ public class Game : MonoBehaviour
 			{
 				animator.SetTrigger("ShowMenu");
 			}
-			FinishMenu.SetBool("Show", true);
+
+			OnMoveNext?.Invoke();
 		}
 	}
 
@@ -46,7 +49,7 @@ public class Game : MonoBehaviour
 	{
 		foreach (Animator animator in animators)
 		{
-			yield return new WaitForSeconds(Random.Range(0.1f, 1.0f));
+			yield return new WaitForSeconds(Random.Range(0.1f, 0.01f));
 			animator.speed = Random.Range(1.0f, 1.3f);
 			animator.SetTrigger("WinGame");
 		}
