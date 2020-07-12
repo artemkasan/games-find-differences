@@ -50,8 +50,8 @@ Canvas:
   m_GameObject: {fileID: 556575583}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 156428220964826876}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -60,7 +60,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &556575586
 MonoBehaviour:
@@ -457,7 +457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.46, y: -2.98}
+  m_AnchoredPosition: {x: -7.459999, y: -2.9799995}
   m_SizeDelta: {x: -14.921875, y: -5.9687386}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1826364654
@@ -625,12 +625,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FoundItemsText: {fileID: 1826364655}
   TotalDifferences: 0
-  FinshContainer: {fileID: 24689734332551375}
   OnMoveNext:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6799243744730785776}
         m_MethodName: NextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7006452259008296320}
+        m_MethodName: HideBaloons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnFinish:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7006452259008296320}
+        m_MethodName: FlyBaloons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -771,6 +795,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88c491fc413b124ab84c9b87760b843, type: 3}
+--- !u!20 &156428220964826876 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 179028589352872708, guid: b88c491fc413b124ab84c9b87760b843,
+    type: 3}
+  m_PrefabInstance: {fileID: 24689735170524664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &156428220964826879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 179028589352872711, guid: b88c491fc413b124ab84c9b87760b843,
@@ -911,15 +941,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 584774e523efb8e418b2c0bad5c15f4a, type: 3}
---- !u!1 &24689734332551375 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4518206930126801079, guid: 584774e523efb8e418b2c0bad5c15f4a,
-    type: 3}
-  m_PrefabInstance: {fileID: 4531837753408034936}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &24689734332551374 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4518206930126801078, guid: 584774e523efb8e418b2c0bad5c15f4a,
     type: 3}
   m_PrefabInstance: {fileID: 4531837753408034936}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7006452259008296320 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6908444142066150904, guid: 584774e523efb8e418b2c0bad5c15f4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 4531837753408034936}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f350bdae9565034caea83807ff57148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
