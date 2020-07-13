@@ -21,7 +21,6 @@ public class CameraPosition : MonoBehaviour
 
 		defaultHeight = Camera.main.orthographicSize;
 		defaultWidth = Camera.main.orthographicSize * Camera.main.aspect;
-		Debug.Log($"orthographicSize: {Camera.main.orthographicSize}, aspect: { Camera.main.aspect}");
 	}
 
 	// Update is called once per frame
