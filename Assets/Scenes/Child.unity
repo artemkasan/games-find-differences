@@ -645,6 +645,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameConstant
       objectReference: {fileID: 0}
+    - target: {fileID: 1136498008578050492, guid: a62ca2a74cf0faf4797b929f809c28e8,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a660cd2d1d940e84d974bf1fa7c7fb1f, type: 3}
     - target: {fileID: 8635819084664436342, guid: a62ca2a74cf0faf4797b929f809c28e8,
         type: 3}
       propertyPath: TotalDifferences
@@ -1531,6 +1536,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3430938413441655368, guid: 6e222f2ed96f317499393aa9cd6a403e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430938413928411790, guid: 6e222f2ed96f317499393aa9cd6a403e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3430938413928411825, guid: 6e222f2ed96f317499393aa9cd6a403e,
         type: 3}
       propertyPath: m_Sprite
@@ -1543,6 +1558,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: aae7fb15d54c4bf4790784885f9e9dad,
         type: 3}
+    - target: {fileID: 4516484619877361932, guid: 6e222f2ed96f317499393aa9cd6a403e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516484619877361932, guid: 6e222f2ed96f317499393aa9cd6a403e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6322975649952509887, guid: 6e222f2ed96f317499393aa9cd6a403e,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7686822221314316559, guid: 6e222f2ed96f317499393aa9cd6a403e,
         type: 3}
       propertyPath: m_LocalPosition.x

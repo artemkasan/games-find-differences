@@ -9,6 +9,11 @@ public class LevelLoader : MonoBehaviour
 
 	public float transitionTime;
 
+	private void Start()
+	{
+		StartCoroutine(PlayAudioSource());
+	}
+
 	public void ReplayScene()
 	{
 		Scene currentScene = SceneManager.GetActiveScene();
@@ -55,5 +60,13 @@ public class LevelLoader : MonoBehaviour
 		yield return new WaitForSeconds(transitionTime);
 
 		SceneManager.LoadScene(buildIndex);
+	}
+
+	public IEnumerator PlayAudioSource()
+	{
+		yield return new WaitForSeconds(transitionTime);
+
+		var audioSource = GetComponent<AudioSource>();
+		audioSource.Play();
 	}
 }
