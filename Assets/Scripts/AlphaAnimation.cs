@@ -8,8 +8,12 @@ public class AlphaAnimation : MonoBehaviour
 	void Update()
 	{
 		var spriteRenderer = this.GetComponent<SpriteRenderer>();
-		var material = new Material(spriteRenderer.sharedMaterial);
-		material.SetFloat("_Alpha", Alpha);
-		spriteRenderer.sharedMaterial = material;
+		if (spriteRenderer.sharedMaterial != null)
+		{
+			var material = new Material(spriteRenderer.sharedMaterial);
+			material.SetFloat("_Alpha", Alpha);
+			spriteRenderer.sharedMaterial = material;
+		}
 	}
 }
+

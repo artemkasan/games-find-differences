@@ -17,6 +17,11 @@ public class ImageArea : MonoBehaviour
 	{
 		if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
 		{
+			if (Game.GameCompleted())
+			{
+				return;
+			}
+
 			Vector3 clickPosition = Input.mousePosition;
 			if (Input.touchCount > 0)
 			{
@@ -35,6 +40,8 @@ public class ImageArea : MonoBehaviour
 					WrongObject.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
 					var animator = WrongObject.GetComponent<Animator>();
 					animator.SetTrigger("Missed");
+					var audioSource = WrongObject.GetComponent<AudioSource>();
+					audioSource.Play();
 				}
 			}
 		}

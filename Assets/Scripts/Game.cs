@@ -16,12 +16,15 @@ public class Game : MonoBehaviour
 	private static HashSet<int> foundItems = new HashSet<int>();
 	private static bool animationRun = false;
 
+	private static int totalDiffernces = 0;
+
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		animationRun = false;
 		foundItems.Clear();
+		totalDiffernces = TotalDifferences;
 	}
 
 	// Update is called once per frame
@@ -30,6 +33,8 @@ public class Game : MonoBehaviour
 		FoundItemsText.text = foundItems.Count.ToString();
 		if (!animationRun && foundItems.Count == TotalDifferences)
 		{
+			var audioSource = GetComponent<AudioSource>();
+			audioSource.Play();
 			animationRun = true;
 			OnFinish?.Invoke();
 		}
@@ -37,6 +42,12 @@ public class Game : MonoBehaviour
 		{
 			OnMoveNext?.Invoke();
 		}
+	}
+
+	public static bool GameCompleted()
+	{
+
+		return foundItems.Count == totalDiffernces;
 	}
 
 	public static void AddFoundItems(int itemIndex)

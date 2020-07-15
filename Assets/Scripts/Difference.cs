@@ -54,6 +54,11 @@ public class Difference : MonoBehaviour
 
 	public void SelectDifference()
 	{
+		if (Game.GameCompleted())
+		{
+			return;
+		}
+
 		var ownAnimator = GetComponent<Animator>();
 		ownAnimator.SetBool("Selected", true);
 		var oppositeAnimator = OppositeDifference.GetComponent<Animator>();
@@ -66,6 +71,10 @@ public class Difference : MonoBehaviour
 		{
 			_currentIndex = 0;
 		}
-		audioSource.Play();
+
+		if (!Game.GameCompleted())
+		{
+			audioSource.Play();
+		}
 	}
 }
