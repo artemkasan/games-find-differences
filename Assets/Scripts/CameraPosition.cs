@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class CameraPosition : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class CameraPosition : MonoBehaviour
 
 		defaultHeight = Camera.main.orthographicSize;
 		defaultWidth = Camera.main.orthographicSize * Camera.main.aspect;
+		Console.WriteLine($"Default height: {defaultHeight}, Width: {defaultWidth}");
 	}
 
 	// Update is called once per frame

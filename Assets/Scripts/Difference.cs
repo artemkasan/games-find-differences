@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Difference : MonoBehaviour
 {
@@ -10,24 +7,8 @@ public class Difference : MonoBehaviour
 	public GameObject OppositeDifference;
 
 	public AudioClip[] FoundAudioClip;
-	private int[] _playOrder = new int[0];
-	private int _currentIndex = 0;
 
-	// Start is called before the first frame update
-	void Start()
-	{
-		var currentClips = new List<int>(Enumerable.Range(0, FoundAudioClip.Length));
-		_playOrder = new int[FoundAudioClip.Length];
-		for (int i = 0; i < FoundAudioClip.Length; i++)
-		{
-			int index = Random.Range(0, currentClips.Count);
-			_playOrder[i] = currentClips[index];
-			currentClips.RemoveAt(index);
-		}
-	}
-
-	// Update is called once per frame
-	void Update()
+	private void OnMouseDown()
 	{
 		if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
 		{
@@ -52,6 +33,11 @@ public class Difference : MonoBehaviour
 		}
 	}
 
+	// Update is called once per frame
+	void Update()
+	{
+	}
+
 	public void SelectDifference()
 	{
 		if (Game.GameCompleted())
@@ -60,21 +46,20 @@ public class Difference : MonoBehaviour
 		}
 
 		var ownAnimator = GetComponent<Animator>();
-		ownAnimator.SetBool("Selected", true);
-		var oppositeAnimator = OppositeDifference.GetComponent<Animator>();
-		oppositeAnimator.SetBool("Selected", true);
-		Game.AddFoundItems(FoundItemIndex);
-		var audioSource = GetComponent<AudioSource>();
-		audioSource.clip = FoundAudioClip[_playOrder[_currentIndex]];
-		_currentIndex++;
-		if (_currentIndex == _playOrder.Length)
+		if (!ownAnimator.GetBool("Selected"))
 		{
-			_currentIndex = 0;
-		}
+			ownAnimator.SetBool("Selected", true);
+			var oppositeAnimator = OppositeDifference.GetComponent<Animator>();
+			oppositeAnimator.SetBool("Selected", true);
+			Game.AddFoundItems(FoundItemIndex);
+			var audioSource = GetComponent<AudioSource>();
+			int index = Random.Range(0, FoundAudioClip.Length);
+			audioSource.clip = FoundAudioClip[index];
 
-		if (!Game.GameCompleted())
-		{
-			audioSource.Play();
+			if (!Game.GameCompleted())
+			{
+				audioSource.Play();
+			}
 		}
 	}
 }

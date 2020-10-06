@@ -11,7 +11,7 @@ public class Finish : MonoBehaviour
 
 	private void Start()
 	{
-		ShowBaloons();
+		//		ShowBaloons();
 	}
 
 	public void ShowBaloons()
@@ -38,6 +38,8 @@ public class Finish : MonoBehaviour
 
 	private IEnumerator StartFlyBaloons()
 	{
+		ShowBaloons();
+
 		var animators = GetComponentsInChildren<Animator>();
 		foreach (Animator animator in animators)
 		{
