@@ -3,35 +3,28 @@ using UnityEngine;
 
 public class CameraPosition : MonoBehaviour
 {
-	public float DefaultOrthographicSize;
-	public float DefaultAspect;
-	public bool MaintainWidth = true;
-	[Range(-1, 1)]
-	public int AdaptPosition;
+	public float DefaultWidth;
 
-	private float defaultWidth;
-	private float defaultHeight;
-	private Vector3 cameraPos;
+	public float DefaultHeight;
 
-
-
+	private float initialOrthographicSize;
 	// Start is called before the first frame update
 	void Start()
 	{
-		cameraPos = Camera.main.transform.position;
-
-		defaultHeight = Camera.main.orthographicSize;
-		defaultWidth = Camera.main.orthographicSize * Camera.main.aspect;
-		Console.WriteLine($"Default height: {defaultHeight}, Width: {defaultWidth}");
+		initialOrthographicSize = Camera.main.orthographicSize;
+		Debug.Log($"Default height: {Screen.height}, Width: {Screen.width}");
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		if (Camera.main.aspect < DefaultAspect)
+		if (Camera.main.aspect < DefaultWidth / DefaultHeight)
 		{
-			Camera.main.orthographicSize = DefaultOrthographicSize * DefaultAspect / Camera.main.aspect;
-
+			Camera.main.orthographicSize = initialOrthographicSize * (DefaultWidth / DefaultHeight) / Camera.main.aspect;
+		}
+		else
+		{
+			Camera.main.orthographicSize = initialOrthographicSize;
 		}
 		// var currentHeight = Camera.main.orthographicSize;
 		// var currentWidth = Camera.main.orthographicSize * Camera.main.aspect;

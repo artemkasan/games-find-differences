@@ -60,7 +60,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -96,7 +96,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e7692c3600e07f4cb36638d38e03fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultOrthographicSize: 5.5
-  DefaultAspect: 1.599379
-  MaintainWidth: 0
-  AdaptPosition: 0
+  DefaultWidth: 630
+  DefaultHeight: 291
