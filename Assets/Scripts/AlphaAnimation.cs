@@ -12,7 +12,7 @@ public class AlphaAnimation : MonoBehaviour
 		if (spriteRenderer.sharedMaterial != null)
 		{
 			alphaMaterial = new Material(spriteRenderer.sharedMaterial);
-			spriteRenderer.sharedMaterial = alphaMaterial;
+			spriteRenderer.material = alphaMaterial;
 		}
 	}
 
@@ -22,13 +22,6 @@ public class AlphaAnimation : MonoBehaviour
 		{
 			alphaMaterial.SetFloat("_Alpha", Alpha);
 		}
-		// var spriteRenderer = this.GetComponent<SpriteRenderer>();
-		// if (spriteRenderer.sharedMaterial != null)
-		// {
-		// 	var material = new Material(spriteRenderer.sharedMaterial);
-		// 	material.SetFloat("_Alpha", Alpha);
-		// 	spriteRenderer.sharedMaterial = material;
-		// }
 	}
 }
 

@@ -1,48 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ImageArea : MonoBehaviour
+public class ImageArea : MonoBehaviour, IPointerClickHandler
 {
 	public GameObject WrongObject;
 
-	// Start is called before the first frame update
-	void Start()
+	public void OnPointerClick(PointerEventData eventData)
 	{
-
-	}
-
-	// Update is called once per frame
-	void Update()
-	{
-		if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
+		if (Game.GameCompleted())
 		{
-			if (Game.GameCompleted())
-			{
-				return;
-			}
+			return;
+		}
 
-			Vector3 clickPosition = Input.mousePosition;
-			if (Input.touchCount > 0)
-			{
-				clickPosition = Input.touches[0].position;
-			}
+		Vector3 clickPosition = eventData.position;
+		Vector3 mousePos = Camera.main.ScreenToWorldPoint(clickPosition);
+		Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
 
-			Vector3 mousePos = Camera.main.ScreenToWorldPoint(clickPosition);
-			Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
-
-			RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-			if (hit.collider != null)
+		RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+		if (hit.collider != null)
+		{
+			var collider = this.GetComponent<BoxCollider2D>();
+			if (hit.collider == collider)
 			{
-				var collider = this.GetComponent<BoxCollider2D>();
-				if (hit.collider == collider)
-				{
-					WrongObject.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
-					var animator = WrongObject.GetComponent<Animator>();
-					animator.SetTrigger("Missed");
-					var audioSource = WrongObject.GetComponent<AudioSource>();
-					audioSource.Play();
-				}
+				WrongObject.transform.position = new Vector3(mousePos.x, mousePos.y, 0);
+				var animator = WrongObject.GetComponent<Animator>();
+				animator.SetTrigger("Missed");
+				var audioSource = WrongObject.GetComponent<AudioSource>();
+				audioSource.Play();
 			}
 		}
 	}

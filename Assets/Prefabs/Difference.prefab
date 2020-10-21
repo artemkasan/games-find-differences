@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9663441964145083}
   - component: {fileID: 6908120160456608448}
   m_Layer: 5
-  m_Name: Difference 1
+  m_Name: Difference
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ RectTransform:
   m_GameObject: {fileID: 1143785216144111283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 64, y: 64, z: 1}
+  m_LocalScale: {x: 1.560976, y: 1.560976, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!114 &1143785216144111284
 MonoBehaviour:
