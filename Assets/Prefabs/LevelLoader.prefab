@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 6776918016441325562}
   - component: {fileID: 6776918016441325565}
   - component: {fileID: 1121978792444459441}
+  - component: {fileID: 8115845364889271505}
   m_Layer: 0
   m_Name: LevelLoader
   m_TagString: Untagged
@@ -133,8 +134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 6776918016485006610}
-  AudioSource: {fileID: 0}
-  SoundToPlay: {fileID: 8300000, guid: a660cd2d1d940e84d974bf1fa7c7fb1f, type: 3}
   transitionTime: 1
 --- !u!82 &1121978792444459441
 AudioSource:
@@ -232,6 +231,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8115845364889271505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6776918016441325563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2a47542b9da1e43a600c1f1ad5ac7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnglishAudio: {fileID: 0}
+  RussianAudio: {fileID: 0}
 --- !u!1 &6776918016485006623
 GameObject:
   m_ObjectHideFlags: 0

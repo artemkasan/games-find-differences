@@ -1,13 +1,41 @@
-﻿using UnityEngine;
+﻿using System.Runtime.InteropServices;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Difference : MonoBehaviour
 {
+    [DllImport("__Internal")]
+    private static extern string language();
+
+	private AudioClip[] _currentAudioClips = new AudioClip[0];
 	public int FoundItemIndex;
 
 	public GameObject OppositeDifference;
 
-	public AudioClip[] FoundAudioClip;
+	public AudioClip[] RussianFoundAudioClip;
+	public AudioClip[] EnglishFoundAudioClip;
+
+
+    void Start()
+    {
+        var audio = GetComponent<AudioSource>();
+        try
+        {
+            var lang = language();
+            if(lang.ToLowerInvariant().StartsWith("ru"))
+            {
+                _currentAudioClips = RussianFoundAudioClip;
+            }
+            else
+            {
+                _currentAudioClips = EnglishFoundAudioClip;
+            }
+        }
+        catch
+        {
+            _currentAudioClips = EnglishFoundAudioClip;
+        }
+	}
 
 	public void SelectDifference()
 	{
@@ -24,8 +52,8 @@ public class Difference : MonoBehaviour
 			oppositeAnimator.SetBool("Selected", true);
 			Game.AddFoundItems(FoundItemIndex);
 			var audioSource = GetComponent<AudioSource>();
-			int index = Random.Range(0, FoundAudioClip.Length);
-			audioSource.clip = FoundAudioClip[index];
+			int index = Random.Range(0, _currentAudioClips.Length);
+			audioSource.clip = _currentAudioClips[index];
 
 			if (!Game.GameCompleted())
 			{

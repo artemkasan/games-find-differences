@@ -121,10 +121,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FoundItemIndex: 1
   OppositeDifference: {fileID: 0}
-  FoundAudioClip:
+  RussianFoundAudioClip:
   - {fileID: 8300000, guid: cf18c7da54a999347979a6c8a14e0315, type: 3}
   - {fileID: 8300000, guid: 10f94b7b3766c9f4bab593d9735665cb, type: 3}
   - {fileID: 8300000, guid: c62f6e59595fe334db329ebb00dc7d21, type: 3}
+  EnglishFoundAudioClip:
+  - {fileID: 8300000, guid: 673f05a1d5e87fc4880ba8dbcfd9b197, type: 3}
+  - {fileID: 8300000, guid: 8ef02995445fc2d40a8a815bbde26189, type: 3}
+  - {fileID: 8300000, guid: 0bc26373609048d44ba1100efd7afa09, type: 3}
 --- !u!95 &9663441964145083
 Animator:
   serializedVersion: 3

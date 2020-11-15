@@ -562,61 +562,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 485198721}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &682362250
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: RedBaloon
-  m_Shader: {fileID: 4800000, guid: dd184affc99541e4994b07aba5550f7a, type: 3}
-  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BumpMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 733eb378226dd3047a5bf9abf686abf1, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _Alpha: 1
-    - _ColorMask: 15
-    - _Cutoff: 0
-    - _EnableExternalAlpha: 0
-    - _Glossiness: 0.78
-    - _Metallic: 0
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _Transparency: 0.76
-    - _UseUIAlphaClip: 0
-    - _Wireframe: 0.00408
-    m_Colors:
-    - _Blue: {r: 0, g: 0, b: 1, a: 1}
-    - _Color: {r: 0, g: 1, b: 0.09767318, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _Green: {r: 0, g: 1, b: 0, a: 1}
-    - _Red: {r: 1, g: 0, b: 0, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
---- !u!21 &746727444
+--- !u!21 &613674898
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -695,6 +641,60 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Green: {r: 0, g: 1, b: 0, a: 1}
     - _Red: {r: 1, g: 0, b: 0, a: 1}
+--- !u!21 &682362250
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RedBaloon
+  m_Shader: {fileID: 4800000, guid: dd184affc99541e4994b07aba5550f7a, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 733eb378226dd3047a5bf9abf686abf1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _Alpha: 1
+    - _ColorMask: 15
+    - _Cutoff: 0
+    - _EnableExternalAlpha: 0
+    - _Glossiness: 0.78
+    - _Metallic: 0
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _Transparency: 0.76
+    - _UseUIAlphaClip: 0
+    - _Wireframe: 0.00408
+    m_Colors:
+    - _Blue: {r: 0, g: 0, b: 1, a: 1}
+    - _Color: {r: 0, g: 1, b: 0.09767318, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _Green: {r: 0, g: 1, b: 0, a: 1}
+    - _Red: {r: 1, g: 0, b: 0, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &828660834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -819,6 +819,21 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: a660cd2d1d940e84d974bf1fa7c7fb1f, type: 3}
+    - target: {fileID: 4546635628820875355, guid: a62ca2a74cf0faf4797b929f809c28e8,
+        type: 3}
+      propertyPath: Count
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8139958851302460636, guid: a62ca2a74cf0faf4797b929f809c28e8,
+        type: 3}
+      propertyPath: RussianAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: a660cd2d1d940e84d974bf1fa7c7fb1f, type: 3}
+    - target: {fileID: 8139958851302460636, guid: a62ca2a74cf0faf4797b929f809c28e8,
+        type: 3}
+      propertyPath: EnglishAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ebf382e809595f409fc3479fd1e26b6, type: 3}
     - target: {fileID: 8635819084664436342, guid: a62ca2a74cf0faf4797b929f809c28e8,
         type: 3}
       propertyPath: TotalDifferences
@@ -1878,7 +1893,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 746727444}
+      objectReference: {fileID: 613674898}
     - target: {fileID: 6322975649952509887, guid: 6e222f2ed96f317499393aa9cd6a403e,
         type: 3}
       propertyPath: m_WasSpriteAssigned

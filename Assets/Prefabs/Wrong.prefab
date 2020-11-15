@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3897438575211155730}
   - component: {fileID: 2146281676854366704}
   - component: {fileID: 653122261743408140}
+  - component: {fileID: 4889807586579651102}
   m_Layer: 5
   m_Name: Wrong
   m_TagString: Untagged
@@ -217,3 +218,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4889807586579651102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746061994417754789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2a47542b9da1e43a600c1f1ad5ac7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnglishAudio: {fileID: 8300000, guid: d056fe5bb58dd064fb212103a24c64b2, type: 3}
+  RussianAudio: {fileID: 8300000, guid: f1175b10721f07345be1e715bd849eab, type: 3}

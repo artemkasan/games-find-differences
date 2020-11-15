@@ -112,6 +112,7 @@ GameObject:
   - component: {fileID: 868409020}
   - component: {fileID: 868409022}
   - component: {fileID: 868409021}
+  - component: {fileID: 4546635628820875355}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -181,6 +182,20 @@ MonoBehaviour:
   m_Text: 'Find 5 differences
 
 '
+--- !u!114 &4546635628820875355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 868409019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001eeb27739fb574b9f4b143bd7d7b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Key: game.findDifferences
+  Count: 0
 --- !u!1 &1237110118
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +723,7 @@ GameObject:
   - component: {fileID: 24689733441172134}
   - component: {fileID: 8635819084664436342}
   - component: {fileID: 282832300848982397}
+  - component: {fileID: 1358312368575343075}
   m_Layer: 0
   m_Name: GameConstant
   m_TagString: Untagged
@@ -882,6 +898,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1358312368575343075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24689733441172135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2a47542b9da1e43a600c1f1ad5ac7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnglishAudio: {fileID: 8300000, guid: 04cd1963fbd2ece4b991ea95f2d0c4d7, type: 3}
+  RussianAudio: {fileID: 8300000, guid: f84092029f01f4b41972e5c2a13ec452, type: 3}
 --- !u!1001 &24689734124548109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1018,15 +1048,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88c491fc413b124ab84c9b87760b843, type: 3}
---- !u!20 &156428220964826876 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 179028589352872708, guid: b88c491fc413b124ab84c9b87760b843,
-    type: 3}
-  m_PrefabInstance: {fileID: 24689735170524664}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &156428220964826879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 179028589352872711, guid: b88c491fc413b124ab84c9b87760b843,
+    type: 3}
+  m_PrefabInstance: {fileID: 24689735170524664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &156428220964826876 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 179028589352872708, guid: b88c491fc413b124ab84c9b87760b843,
     type: 3}
   m_PrefabInstance: {fileID: 24689735170524664}
   m_PrefabAsset: {fileID: 0}
