@@ -20,4 +20,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Camping.unity
     guid: e4cb2751ff268fb448d18d09020f1091
+  - enabled: 1
+    path: Assets/Scenes/PlayingChildren.unity
+    guid: 15ed0f43b771c944094347494ca3eb29
+  - enabled: 1
+    path: Assets/Scenes/Rabbits.unity
+    guid: d9fe8799b0b611d4db9c58511ff499f3
+  - enabled: 1
+    path: Assets/Scenes/RunningChildren.unity
+    guid: 4a8adea9d415e664e83e8f3402d224e2
+  - enabled: 1
+    path: Assets/Scenes/Snowman.unity
+    guid: baeac79ffc54517459b2588c4dfd40ef
   m_configObjects: {}
