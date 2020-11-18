@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Snowman.unity
     guid: baeac79ffc54517459b2588c4dfd40ef
+  - enabled: 1
+    path: Assets/Scenes/Winter.unity
+    guid: baaba77defbd06a42850b458d24d7a8e
+  - enabled: 1
+    path: Assets/Scenes/Racing.unity
+    guid: 6c50c97a8fb3dc641a4580f218c352f6
   m_configObjects: {}
