@@ -24,7 +24,12 @@ public class LoadBundle : MonoBehaviour
 
     private IEnumerator LoadBundleAsync()
     {
+        while(!Caching.ready)
+        {
+            yield return null;
+        }
         var baseUrl = RootBundleLoader.GetBundlesUrl();
+
         using (UnityWebRequest uwr = UnityWebRequestAssetBundle.GetAssetBundle(
             $"{baseUrl}/{BundleName}.unity3d", Version, 0))
         {

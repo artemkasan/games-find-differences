@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 001eeb27739fb574b9f4b143bd7d7b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Key: game.findDifferences
+  Key: games.findDifferences.game.findDifferences
   Count: 0
 --- !u!1 &1237110118
 GameObject:
@@ -979,6 +979,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 6776918016441325565, guid: 6c09e836206d8c94084747b54cc10a4c,
+        type: 3}
+      propertyPath: goHomeButton
+      value: 
+      objectReference: {fileID: 1237110120}
     - target: {fileID: 6776918016485006611, guid: 6c09e836206d8c94084747b54cc10a4c,
         type: 3}
       propertyPath: m_SortingOrder
