@@ -1,16 +1,29 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelLoader : MonoBehaviour
 {
+	[DllImport("__Internal")]
+    private static extern bool allowGoHome();
+
 	public Animator transition;
 
 	public float transitionTime;
 
+	public Button goHomeButton;
 	private void Start()
 	{
+		try
+		{
+			goHomeButton.gameObject.SetActive(AllowtoGoHome());
+		}
+		catch {
+			// Use default behavior if it is impossible to call plugin.
+		}
+
 		StartCoroutine(PlayAudioSource());
 	}
 
@@ -22,13 +35,23 @@ public class LevelLoader : MonoBehaviour
 
 	public void NextScene()
 	{
-		Scene currentScene = SceneManager.GetActiveScene();
-		int nextSceneIndex = currentScene.buildIndex + 1;
-		if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+		if(AllowtoGoHome())
 		{
-			nextSceneIndex = 1;
+			Scene currentScene = SceneManager.GetActiveScene();
+			int nextSceneIndex = currentScene.buildIndex + 1;
+			if (nextSceneIndex == SceneManager.sceneCountInBuildSettings)
+			{
+				GoHome();
+			}
+			else
+			{
+				SelectScene(nextSceneIndex);
+			}
 		}
-		SelectScene(nextSceneIndex);
+		else
+		{
+			ReplayScene();
+		}
 	}
 
 	public void GoHome()
@@ -68,5 +91,17 @@ public class LevelLoader : MonoBehaviour
 
 		var audioSource = GetComponent<AudioSource>();
 		audioSource.Play();
+	}
+
+	private bool AllowtoGoHome()
+	{
+		try
+		{
+			return allowGoHome();
+		}
+		catch
+		{
+			return true;
+		}
 	}
 }

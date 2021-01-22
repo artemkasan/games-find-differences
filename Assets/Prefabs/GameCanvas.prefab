@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 7686822221314316560}
   - component: {fileID: 7686822221314316561}
   - component: {fileID: 7686822221314316562}
+  - component: {fileID: 5090280154515748936}
   - component: {fileID: 9197089091436017183}
   m_Layer: 5
   m_Name: GameCanvas
@@ -193,6 +194,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5090280154515748936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7686822221314316563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ca76a65b0565894ca9284742f5f2bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OriginalRenderer: {fileID: 4314645191786078187}
+  ChangedRendrer: {fileID: 2923184797575686368}
+  BundleName: 
+  Version: 0
 --- !u!114 &9197089091436017183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +382,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7686822220520472158}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &2923184797575686368 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4772734788066973374, guid: 93b77514cf1541d469c5b48c49639bcd,
+    type: 3}
+  m_PrefabInstance: {fileID: 7686822220520472158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7686822221290390433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -515,6 +538,12 @@ BoxCollider2D:
 --- !u!1 &2977241860258206407 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4898893469944828262, guid: a05c80083215fcb4e913852aca20604f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7686822221290390433}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &4314645191786078187 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5858522189733977162, guid: a05c80083215fcb4e913852aca20604f,
     type: 3}
   m_PrefabInstance: {fileID: 7686822221290390433}
   m_PrefabAsset: {fileID: 0}

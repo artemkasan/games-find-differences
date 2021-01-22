@@ -1676,12 +1676,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1820535160707592352, guid: 6e222f2ed96f317499393aa9cd6a403e,
+        type: 3}
+      propertyPath: BundleName
+      value: Camping
+      objectReference: {fileID: 0}
     - target: {fileID: 2923184797575686368, guid: 6e222f2ed96f317499393aa9cd6a403e,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3979d93060675564db7f6441341cf1c1,
+      propertyPath: m_Size.y
+      value: 5.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2923184797575686368, guid: 6e222f2ed96f317499393aa9cd6a403e,
         type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3430938413928411825, guid: 6e222f2ed96f317499393aa9cd6a403e,
         type: 3}
       propertyPath: m_Sprite
@@ -1694,17 +1703,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 3979d93060675564db7f6441341cf1c1,
         type: 3}
-    - target: {fileID: 4314645191786078187, guid: 6e222f2ed96f317499393aa9cd6a403e,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c0163cbccd23fcd45b7ec9575d53807d,
-        type: 3}
     - target: {fileID: 4861178542265853541, guid: 6e222f2ed96f317499393aa9cd6a403e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1881578797}
+      objectReference: {fileID: 1842085727}
+    - target: {fileID: 5090280154515748936, guid: 6e222f2ed96f317499393aa9cd6a403e,
+        type: 3}
+      propertyPath: BundleName
+      value: Camping
+      objectReference: {fileID: 0}
     - target: {fileID: 6322975649952509887, guid: 6e222f2ed96f317499393aa9cd6a403e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1763,7 +1771,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1802292530}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1881578797
+--- !u!21 &1842085727
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
